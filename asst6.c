@@ -31,7 +31,10 @@ void test_heap(void) {
 
   exit(0);
 }
+
 int main(void) {
   srand(time(NULL));
   test_heap();
+
+  return 0;
 }

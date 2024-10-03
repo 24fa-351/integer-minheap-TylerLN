@@ -1,4 +1,3 @@
-
 #include "some_heap.h"
 
 #include <math.h>
