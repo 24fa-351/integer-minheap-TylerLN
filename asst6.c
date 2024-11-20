@@ -23,7 +23,7 @@ void test_heap(void) {
     heap_print(heap);
   }
 
-  for (int ix = 0; ix < 10; ix++) {
+  for (int iy = 0; iy < 10; iy++) {
     heap_key_t key = (heap_key_t)heap_remove_min(heap);
     printf("Removed %llu\n", key);
     heap_print(heap);
