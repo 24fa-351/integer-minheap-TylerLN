@@ -1,12 +1,16 @@
-
 #ifndef HEAP_H
 #define HEAP_H
 
 // a min heap
 
 typedef unsigned long long heap_key_t;
-typedef void* heap_value_t;
+typedef void *heap_value_t;
 #define HEAP_KEY_FORMAT "%llu"
+
+typedef union heap_val {
+    unsigned long long as_int;
+    void *as_ptr;
+} heap_val_t;
 
 typedef struct {
     heap_key_t key;
@@ -16,7 +20,7 @@ typedef struct {
 typedef struct {
     heap_node_t *data;
     int size;
-    int capacity;
+    unsigned int capacity;
 } heap_t;
 
 heap_t *heap_create(int capacity);
